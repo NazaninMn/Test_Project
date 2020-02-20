@@ -1,0 +1,20 @@
+    ((*- extends 'article.tplx' -*))
+
+((* block author*))
+   \author{Nazanin Moradinasab}
+((* endblock author*))
+
+((* block title*))
+   \title{Name of the project}
+((* endblock title*))
+
+((* block input_group *))
+    ((*- if cell.metadata.get('nbconvert', {}).get('show_code', False) -*))
+        ((( super() )))
+    ((*- endif -*))
+((* endblock input_group *))
+
+((* block bibliography *))
+\bibliographystyle{unsrt}
+\bibliography{Ref}
+((* endblock bibliography *))
